@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-18.04'
   demands:
-  - npm
+  -  npm
 
 variables:
   buildConfiguration: 'Release'
@@ -29,7 +29,7 @@ steps:
   displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
-  displayName: 'Write build info'
+  displayName: 'Write build infos'
   workingDirectory: $(wwwrootDir)
 
 - task: DotNetCoreCLI@2
